@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.min.css">
+  <script src="lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="window.location='budgeting.html'" tappable>
+          Budgeting
+        </ons-list-item>
+        <ons-list-item onclick="window.location='transfer.html'" tappable>
+          Money Transfer
+        </ons-list-item>
+        <ons-list-item onclick="window.location='accounts.html'" tappable>
+          Accounts
+        </ons-list-item>
+        <ons-list-item onclick="window.location='cards.html'" tappable>
+          Cards
+        </ons-list-item>
+        <ons-list-item onclick="window.location='sign_out.html'" tappable>
+          Sign Out
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Transfer Between My Accounts
+      </div>
+    </ons-toolbar>
+
+  <ons-list>
+    <ons-list-item modifier="chevron" tappable> From </ons-list-item>
+    <ons-list-item modifier="chevron" tappable> To </ons-list-item>
+ </ons-list>
+
+ <p></p>
+
+ <ons-list>
+   <ons-list-item>
+     <div class="left"> Amount </div>
+     <div class="right">
+       <ons-input id="amount" modifier="underbar" placeholder="$0.0"></ons-input>
+     </div>
+   </ons-list-item>
+
+   <ons-list-item>
+     <div class="left"> Date </div>
+     <div class="right">
+       <ons-input id="amount" placeholder="11/04/2017"></ons-input>
+     </div>
+   </ons-list-item>
+
+</ons-list>
+
+<p style="margin-top: 30px;">
+  <ons-button onclick="login()">Cancel</ons-button>
+  <ons-button onclick="login()">Transfer</ons-button>
+</p>
+<template id="home.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">
+            Crossing Banks
+          </div>
+        </ons-toolbar>
+        <div style="text-align: center; margin-top: 30px;">
+          <p>
+            <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+          </p>
+          <p>
+            <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+          </p>
+          <p style="margin-top: 30px;">
+            <ons-button onclick="login()">Sign in</ons-button>
+          </p>
+          <p></p>
+          <section style="padding: 8px">
+          <ons-button modifier="quiet">Sign Up</ons-button>
+         </section>
+        </div>
+      </ons-page>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
