@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.min.css">
+  <script src="lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item onclick="window.location='budgeting.html'" tappable>
+            Budgeting
+          </ons-list-item>
+          <ons-list-item onclick="window.location='transfer.html'" tappable>
+            Money Transfer
+          </ons-list-item>
+          <ons-list-item onclick="window.location='accounts.html'" tappable>
+            Accounts
+          </ons-list-item>
+          <ons-list-item onclick="window.location='cards.html'" tappable>
+            Cards
+          </ons-list-item>
+          <ons-list-item onclick="window.location='sign_out.html'" tappable>
+            Sign Out
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+  </ons-splitter>
+
+  <template id="home.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Budgeting
+        </div>
+      </ons-toolbar>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <ons-select id="choose-sel" onchange="editSelects(event)">
+          <option value="201711">November 2017</option>
+          <option value="201710">October 2017</option>
+          <option value="201709">September 2017</option>
+          <option value="201708">August 2017</option>
+          <option value="201707">July 2017</option>
+          <option value="201706">June 2017</option>
+        </ons-select>
+      </div>
+
+      <ons-list>
+        <ons-list-item style="background:#3366ff; color:#ffffff;">
+          <div class="left"> Income </div>
+          <div class="right"> $50.000,00 </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/icon_bank_of_america.jpg">
+          </div>
+          <div class="center">
+            <img class="list-item__thumbnail" src="img/icon_checking_accounts.jpg">
+            **1234
+          </div>
+          <div class="right"> $20.000,00 </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/icon_empty.jpg">
+          </div>
+          <div class="center">
+            <img class="list-item__thumbnail" src="img/icon_savings_accounts.jpg">
+            **2456
+          </div>
+          <div class="right"> $10.000,00 </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/icon_us_bank.jpg">
+          </div>
+          <div class="center">
+            <img class="list-item__thumbnail" src="img/icon_checking_accounts.jpg">
+            **1234
+          </div>
+          <div class="right"> $10.000,00 </div>
+        </ons-list-item>
+
+      </ons-list>
+
+      <p></p>
+
+      <ons-list>
+
+        <ons-list-item style="background:#3366ff; color:#ffffff;">
+          <div class="left"> Expenses </div>
+          <div class="right"> $4.000,00 </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/icon_bank_of_america.jpg">
+          </div>
+          <div class="center">
+            <img class="list-item__thumbnail" src="img/icon_debit.jpg">
+            **1234
+          </div>
+          <div class="right"> $1.000,00 </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/icon_empty.jpg">
+          </div>
+          <div class="center">
+            <img class="list-item__thumbnail" src="img/icon_credit.jpg">
+            **2346
+          </div>
+          <div class="right"> $2.000,00 </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/icon_us_bank.jpg">
+          </div>
+          <div class="center">
+            <img class="list-item__thumbnail" src="img/icon_credit.jpg">
+            **1234
+          </div>
+          <div class="right"> $1.000,00 </div>
+        </ons-list-item>
+
+      </ons-list>
+    </ons-page>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
