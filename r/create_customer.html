@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="./lib/onsen/css/onsen-css-components.min.css">
+  <script src="./lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="window.location='create_customer.html'" tappable>
+          Create Customer Account
+        </ons-list-item>
+        <ons-list-item onclick="window.location='find_customer.html'" tappable>
+          Find Customer Account
+        </ons-list-item>
+        <ons-list-item onclick="window.location='sign_out.html'" tappable>
+          Sign Out
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+  <template id="home.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Create Customr
+        </div>
+      </ons-toolbar>
+      <div style="text-align: center; margin-top: 30px;">
+        <p>
+          <ons-input id="name" modifier="underbar" placeholder="Name" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="lastname" modifier="underbar" placeholder="Last Name" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="email" modifier="underbar" placeholder="E-Mail" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="street1" modifier="underbar" placeholder="Street 1" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="street2" modifier="underbar" placeholder="Street 2" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="city" modifier="underbar" placeholder="City" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="city" modifier="underbar" placeholder="State" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="city" modifier="underbar" placeholder="Zipcode" float></ons-input>
+        </p>
+        <p style="margin-top: 30px;">
+          <ons-button onclick="window.location='budgeting.html'">Sign in</ons-button>
+        </p>
+        <p></p>
+      </div>
+    </ons-page>
+  </template>
+<script src="./app.js"></script>
+</body>
+</html>
