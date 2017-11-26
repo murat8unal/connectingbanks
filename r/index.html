@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.min.css">
-  <script src="lib/onsen/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="../lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="../lib/onsen/css/onsen-css-components.min.css">
+  <script src="../lib/onsen/js/onsenui.min.js"></script>
 </head>
 <body>
   <ons-splitter>
   <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
     <ons-page>
       <ons-list>
-        <ons-list-item onclick="window.location='budgeting.html'" tappable>
-          Budgeting
+        <ons-list-item onclick="window.location='create_customer.html'" tappable>
+          Create Customer Account
         </ons-list-item>
-        <ons-list-item onclick="window.location='transfer.html'" tappable>
-          Money Transfer
-        </ons-list-item>
-        <ons-list-item onclick="window.location='accounts.html'" tappable>
-          Accounts
-        </ons-list-item>
-        <ons-list-item onclick="window.location='cards.html'" tappable>
-          Cards
+        <ons-list-item onclick="window.location='find_customer.html'" tappable>
+          Find Customer Account
         </ons-list-item>
         <ons-list-item onclick="window.location='sign_out.html'" tappable>
           Sign Out
@@ -40,7 +34,7 @@
           </ons-toolbar-button>
         </div>
         <div class="center">
-          Crossing Banks
+          Crossing Banks Customer Representative
         </div>
       </ons-toolbar>
       <div style="text-align: center; margin-top: 30px;">
@@ -54,12 +48,9 @@
           <ons-button onclick="window.location='budgeting.html'">Sign in</ons-button>
         </p>
         <p></p>
-        <section style="padding: 8px">
-        <ons-button modifier="quiet">Sign Up</ons-button>
-       </section>
       </div>
     </ons-page>
   </template>
-<script src="app.js"></script>
+<script src="../app.js"></script>
 </body>
 </html>
