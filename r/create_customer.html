@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="./lib/onsen/css/onsenui.css">
-  <link rel="stylesheet" href="./lib/onsen/css/onsen-css-components.min.css">
-  <script src="./lib/onsen/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="../lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="../lib/onsen/css/onsen-css-components.min.css">
+  <script src="../lib/onsen/js/onsenui.min.js"></script>
 </head>
 <body>
   <ons-splitter>
@@ -34,7 +34,10 @@
           </ons-toolbar-button>
         </div>
         <div class="center">
-          Create Customr
+          Create Customer Account
+        </div>
+        <div class="right">
+          <img src="../img/icon_crossing_banks.gif">
         </div>
       </ons-toolbar>
       <div style="text-align: center; margin-top: 30px;">
@@ -43,6 +46,9 @@
         </p>
         <p>
           <ons-input id="lastname" modifier="underbar" placeholder="Last Name" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="phone" modifier="underbar" placeholder="Phone" float></ons-input>
         </p>
         <p>
           <ons-input id="email" modifier="underbar" placeholder="E-Mail" float></ons-input>
@@ -69,12 +75,12 @@
           <ons-input id="city" modifier="underbar" placeholder="Zipcode" float></ons-input>
         </p>
         <p style="margin-top: 30px;">
-          <ons-button onclick="window.location='budgeting.html'">Sign in</ons-button>
+          <ons-button onclick="window.location='budgeting.html'">Create Account</ons-button>
         </p>
         <p></p>
       </div>
     </ons-page>
   </template>
-<script src="./app.js"></script>
+<script src="../app.js"></script>
 </body>
 </html>

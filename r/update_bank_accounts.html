@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="../lib/onsen/css/onsen-css-components.min.css">
+  <script src="../lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item onclick="window.location='create_customer.html'" tappable>
+            Create Customer Account
+          </ons-list-item>
+          <ons-list-item onclick="window.location='find_customer.html'" tappable>
+            Find Customer Account
+          </ons-list-item>
+          <ons-list-item onclick="window.location='sign_out.html'" tappable>
+            Sign Out
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Customer Bank Accounts Management
+      </div>
+      <div class="right">
+        <img src="../img/icon_crossing_banks.gif">
+      </div>
+    </ons-toolbar>
+
+  <ons-list>
+    <ons-list-item>
+      <div class="left"> Name    : Mike Smith </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="left"> Username:mikesmith200 </div>
+      <div class="right"> E-Mail: mikesmith200@gmail.com </div>
+    </ons-list-item>
+
+    <ons-list-item style="background:#CC33CC; color:#ffffff;">
+      <div class="left"> <img class="list-item__thumbnail" src="../img/icon_citi_bank.jpg"> </div>
+      <div class="Center"> Citi Bank </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_checking_accounts.jpg"> </div>
+        <div class="center"> Account ****5742 </div>
+        <div class="right">  <ons-icon icon="fa-minus-circle" size="20px"></ons-icon> </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_savings_accounts.jpg"> </div>
+        <div class="center"> Account ****6724 </div>
+        <div class="right">  <ons-icon icon="fa-minus-circle" size="20px"></ons-icon> </div>
+    </ons-list-item>
+
+    <ons-list-item style="background:#CC33CC; color:#ffffff;">
+      <div class="left"> <img class="list-item__thumbnail" src="../img/icon_chase.jpg"> </div>
+      <div class="Center"> Chase Bank </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_checking_accounts.jpg"> </div>
+        <div class="center"> Account ****7813 </div>
+        <div class="right">  <ons-icon icon="fa-minus-circle" size="20px"></ons-icon> </div>
+    </ons-list-item>
+
+
+  </ons-list>
+</ons-page>
+</template>
+
+
+  <ons-fab position="bottom right" onclick="fn.load('addAccount.html')">
+    <ons-icon icon="md-plus"></ons-icon>
+  </ons-fab>
+<script src="../app.js"></script>
+</body>
+</html>

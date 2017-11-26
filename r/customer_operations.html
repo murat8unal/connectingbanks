@@ -34,24 +34,34 @@
           </ons-toolbar-button>
         </div>
         <div class="center">
-          Crossing Banks Customer Representative
+          Customer Operations Menu
         </div>
         <div class="right">
           <img src="../img/icon_crossing_banks.gif">
         </div>
-      </ons-toolbar>
-      <div style="text-align: center; margin-top: 30px;">
-        <p>
-          <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
-        </p>
-        <p>
-          <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
-        </p>
-        <p style="margin-top: 30px;">
-          <ons-button onclick="window.location='create_customer.html'">Sign in</ons-button>
-        </p>
-        <p></p>
-      </div>
+    </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item>
+          <div class="left"> Name    : Mike Smith </div>
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="left"> Username:mikesmith200 </div>
+          <div class="right"> E-Mail: mikesmith200@gmail.com </div>
+        </ons-list-item>
+      </ons-list>
+
+      <p style="margin-top: 20px;">
+        <ons-button onclick="window.location='update_personal_info.html'" modifier="quiet">Update Personal Informatón</ons-button>
+      </p>
+      <p style="margin-top: 20px;">
+        <ons-button onclick="window.location='update_bank_accounts.html'" modifier="quiet">Update Bank Accounts</ons-button>
+      </p>
+      <p style="margin-top: 20px;">
+        <ons-button onclick="window.location='update_cards.html'" modifier="quiet">Update Cards</ons-button>
+      </p>
+
     </ons-page>
   </template>
 <script src="../app.js"></script>
