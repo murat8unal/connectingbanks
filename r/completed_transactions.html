@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="../lib/onsen/css/onsen-css-components.min.css">
+  <script src="../lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item onclick="window.location='create_customer.html'" tappable>
+            Create Customer Account
+          </ons-list-item>
+          <ons-list-item onclick="window.location='find_customer.html'" tappable>
+            Find Customer Account
+          </ons-list-item>
+          <ons-list-item onclick="window.location='sign_out.html'" tappable>
+            Sign Out
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Completed Transaction Lists
+      </div>
+      <div class="right">
+        <img src="../img/icon_crossing_banks.gif">
+      </div>
+    </ons-toolbar>
+
+  <ons-list>
+    <ons-list-item>
+      <div class="left"> Name    : Mike Smith </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="left"> Username:mikesmith200 </div>
+      <div class="right"> E-Mail: mikesmith200@gmail.com </div>
+    </ons-list-item>
+
+    <ons-list-item style="background:#CC33CC; color:#ffffff;">
+      <div class="left">Money Transfers</div>
+    </ons-list-item>
+    <ons-list-item style="background:#CC33CC; color:#ffffff;">
+      <div class="left">Source Account</div>
+      <div class="center">Target Account &nbsp;&nbsp;&nbsp;&nbsp;Date</div>
+      <div class="right">Amount</div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_citi_bank.jpg"> </div>
+        <div class="left">  ****5742 </div>
+        <div class="center"> <img class="list-item__thumbnail" src="../img/icon_citi_bank.jpg"> </div>
+        <div class="center"> ****4342  &nbsp;&nbsp;&nbsp;&nbsp;  10/04/17</div>
+        <div class="right"> $350 </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_chase.jpg"> </div>
+        <div class="left">  ****2342 </div>
+        <div class="center"> <img class="list-item__thumbnail" src="../img/icon_citi_bank.jpg"> </div>
+        <div class="center"> ****4342  &nbsp;&nbsp;&nbsp;&nbsp;  10/12/17</div>
+        <div class="right"> $1.150 </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_bank_of_america.jpg"> </div>
+        <div class="left">  ****2342 </div>
+        <div class="center"> <img class="list-item__thumbnail" src="../img/icon_chase.jpg"> </div>
+        <div class="center"> ****4342  &nbsp;&nbsp;&nbsp;&nbsp;  10/15/17</div>
+        <div class="right"> $220 </div>
+    </ons-list-item>
+
+    <ons-list-item style="background:#CC33CC; color:#ffffff;">
+      <div class="left">Pay Bill Transfers</div>
+    </ons-list-item>
+    <ons-list-item style="background:#CC33CC; color:#ffffff;">
+      <div class="left">Source Account</div>
+      <div class="center">Target Company &nbsp;&nbsp;&nbsp;Date</div>
+      <div class="right">Amount</div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_chase.jpg"> </div>
+        <div class="left">  ****1234 </div>
+        <div class="center"> PG & E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  10/08/17</div>
+        <div class="right"> $90 </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="../img/icon_chase.jpg"> </div>
+        <div class="left">  ****1234 </div>
+        <div class="center"> Comcast  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  10/15/17</div>
+        <div class="right"> $55 </div>
+    </ons-list-item>
+
+  </ons-list>
+</ons-page>
+</template>
+
+<script src="../app.js"></script>
+</body>
+</html>

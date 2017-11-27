@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.min.css">
+  <script src="lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item onclick="window.location='budgeting.html'" tappable>
+            Budget
+          </ons-list-item>
+          <ons-list-item onclick="window.location='transfer.html'" tappable>
+            Transfer Money
+          </ons-list-item>
+          <ons-list-item onclick="window.location='paybill.html'" tappable>
+            Pay Bill
+          </ons-list-item>
+          <ons-list-item onclick="window.location='completed_transactions.html'" tappable>
+            Completed Transactions
+          </ons-list-item>
+          <ons-list-item onclick="window.location='pending_transactions.html'" tappable>
+            Pending Transactions
+          </ons-list-item>
+          <ons-list-item onclick="window.location='accounts.html'" tappable>
+            Accounts
+          </ons-list-item>
+          <ons-list-item onclick="window.location='cards.html'" tappable>
+            Cards
+          </ons-list-item>
+          <ons-list-item onclick="window.location='contact.html'" tappable>
+            Customer Service
+          </ons-list-item>
+          <ons-list-item onclick="window.location='sign_out.html'" tappable>
+            Sign Out
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Pending Transaction Lists
+      </div>
+      <div class="right">
+        <img src="img/icon_crossing_banks.gif">
+      </div>
+    </ons-toolbar>
+
+  <ons-list>
+    <ons-list-item style="background:#3366ff; color:#ffffff;">
+      <div class="left">Pending Money Transfers</div>
+    </ons-list-item>
+    <ons-list-item style="background:#3366ff; color:#ffffff;">
+      <div class="left">Source Account</div>
+      <div class="center">Target Account &nbsp;&nbsp;&nbsp;&nbsp;Date</div>
+      <div class="right">Amount</div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="img/icon_us_bank.jpg"> </div>
+        <div class="left">  ****5312 </div>
+        <div class="center"> <img class="list-item__thumbnail" src="img/icon_bank_of_america.jpg"> </div>
+        <div class="center"> ****6762  &nbsp;&nbsp;&nbsp;&nbsp;  10/14/17</div>
+        <div class="right"> $250 </div>
+    </ons-list-item>
+
+    <ons-list-item style="background:#3366ff; color:#ffffff;">
+      <div class="left">Pending Pay Bill Transfers</div>
+    </ons-list-item>
+    <ons-list-item style="background:#3366ff; color:#ffffff;">
+      <div class="left">Source Account</div>
+      <div class="center">Target Company &nbsp;&nbsp;&nbsp;Date</div>
+      <div class="right">Amount</div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="img/icon_bank_of_america.jpg"> </div>
+        <div class="left">  ****1234 </div>
+        <div class="center"> AllState  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  10/23/17</div>
+        <div class="right"> $130 </div>
+    </ons-list-item>
+
+    <ons-list-item>
+        <div class="left"> <img class="list-item__thumbnail" src="img/icon_us_bank.jpg"> </div>
+        <div class="left">  ****3421 </div>
+        <div class="center"> Calwater &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  10/12/17</div>
+        <div class="right"> $35 </div>
+    </ons-list-item>
+
+  </ons-list>
+</ons-page>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
